@@ -120,19 +120,35 @@
       <p>
         This section defines which support for styling with CSS is required at this level.
       </p>
-      <!-- 
-      - vendor prefixes allowed
-      - CSS 2.1:
-        - selectors
-        - generated content
-        - mixmax
-      - CSS Animation
-      - CSS Color: opacity, RGBA, HSLA
-      - CSS Transforms
-      - CSS Transitions
-      - CSS UI: text-overflow, box-sizing, pointer-events
-      - CSS Values: rem values
-      -->
+      <p>
+        It is particularly important to note that <em>at this level</em> and depending on future decisions
+        quite possibly <em>at this level only</em> a user agent is considered to support the features required
+        in this section even if they are only available behind vendor prefixes.
+      </p>
+      <p>
+        User agents MUST support CSS 2.1 [[!CSS21]]. Of particular note, all selectors, generated content, and
+        min-/max- properties need to be suported.
+      </p>
+      <p>
+        User agents MUST support CSS Animation [[!CSS3-ANIMATIONS]].
+      </p>
+      <p>
+        User agents MUST support CSS Color [[!CSS3COLOR]], specifically the <code>opacity</code> property,
+        and RGBA and HSLA values.
+      </p>
+      <p>
+        User agents MUST support CSS 2D Transforms [[!CSS3-2D-TRANSFORMS]].
+      </p>
+      <p>
+        User agents MUST support CSS Transitions [[!CSS3-TRANSITIONS]].
+      </p>
+      <p>
+        User agents MUST support CSS User Interfcae [[!CSS3UI]], specifically <code>text-overflow</code>,
+        <code>box-sizing</code>, and <code>pointer-events</code>.
+      </p>
+      <p>
+        User agents MUST support the <code>rem</code> unit from CSS Values [[!CSS3VAL]].
+      </p>
     </section>
     <section>
       <h2>Scripting</h2>
@@ -140,7 +156,7 @@
         This section defines which scripting support in language and APIs are required at this level.
       </p>
       <p>
-        User agents MUST support ECMAScript ed3 [[!ECMA262]] in full, plus all the parts from ed5 that
+        User agents MUST support ECMAScript ed3 [[!ECMA-262]] in full, plus all the parts from ed5 that
         can be shimmed, including native JSON. Notably, user agents MUST support callable host objects
         using <code>apply()</code>.
       </p>
@@ -149,7 +165,7 @@
         If you implement JS in JS you can shim pretty much anything.
       </p>
       <p>
-        User agents MUST support the Canvas2D API [[!CANVAS2D]].
+        User agents MUST support the Canvas2D API [[!CANVAS-2D]].
       </p>
       <p>
         User agents MUST support the Geolocation API [[!GEOLOCATION-API]].
@@ -158,11 +174,11 @@
         User agents MUST support the Web Messaging API [[!POSTMSG]].
       </p>
       <p>
-        User agents MUST support the XMLHttpRequest API [[!XHR]], notably support for
+        User agents MUST support the XMLHttpRequest API level 2 [[!XMLHTTPREQUEST2]], notably support for
         Progress Events [[!PROGRESS-EVENTS]].
       </p>
       <p>
-        User agents MUST support the Selector API level 2 [[!SELECTOR2]].
+        User agents MUST support the Selectors API level 2 [[!SELECTORS-API2]].
       </p>
       <p>
         User agents MUST support the Web Storage API [[!WEBSTORAGE]].
