@@ -162,8 +162,22 @@
         in this section even if they are only available behind vendor prefixes.
       </p>
       <p>
-        User agents MUST support CSS 2.1 [[!CSS21]]. Of particular note, all selectors, generated content, and
-        min-/max- properties need to be suported.
+        User agents MUST support CSS 2.1 [[!CSS21]]. Implementers should pay special attention to:
+      </p>
+      <ul>
+        <li>all selectors</li>
+        <li>generated content</li>
+        <li><code>position: fixed</code></li>
+        <li>min-/max- properties</li>
+        <li>Display values for inline-block and tables</li>
+      </ul>
+      <p>
+        User agents MUST support CSS Media Queries [[!CSS3-MQ]] for the following media features:
+        width, height, device-width, device-height, and orientation (including their min-/max- variants
+        where applicable).
+      </p>
+      <p>
+        User agents MUST support CSS Backgrounds and Borders [[!CSS3-BACKGROUND]].
       </p>
       <p>
         User agents MUST support CSS Animation [[!CSS3-ANIMATIONS]].
@@ -182,8 +196,24 @@
         User agents MUST support CSS Transitions [[!CSS3-TRANSITIONS]].
       </p>
       <p>
-        User agents MUST support CSS User Interfcae [[!CSS3UI]], specifically <code>text-overflow</code>,
+        User agents MUST support CSS User Interface [[!CSS3UI]], specifically <code>text-overflow</code>,
         <code>box-sizing</code>, and <code>pointer-events</code>.
+      </p>
+      <p>
+        User agents MUST support Flexible Box Layout [[!CSS-FLEXBOX]].
+      </p>
+      <p>
+        User agents MUST support CSS Multi-column Layout [[!CSS-MULTICOL]].
+      </p>
+      <p>
+        User agents MUST support CSS Image Values and Replaced Content [[!CSS-IMAGEVAL]] for gradients.
+      </p>
+      <p>
+        User agents MUST support CSS Text [[!CSS3-TEXT]], notably the <code>word-wrap</code> property
+        (now called <code>overflow-wrap</code>, either naming is acceptable) and <code>text-shadow</code>.
+      </p>
+      <p class='issue'>
+        I doubt that we want all of CSS Text just yet.
       </p>
       <p>
         User agents MUST support the <code>rem</code> unit from CSS Values [[!CSS3VAL]].
