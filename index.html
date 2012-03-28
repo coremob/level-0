@@ -34,7 +34,7 @@
       <p>
         This specification describes the core set of technologies that define the baseline platform
         for mobile Web applications to target. It does not create any new technology but rather syndicates
-        them into a globally coherent view of the mobile Web platform.
+        them into a globally coherent view of the Web platform as available on mobile devices.
       </p>
       <p>
         This is Level 0, the first iteration. As the platform evolves and new technologies become broadly
@@ -42,50 +42,113 @@
         on top of the present one.
       </p>
     </section>
-    <section class='informative'>
-      <h2>Introduction</h2>
+    <section>
+      <h2>Philosophy</h2>
+      <p>
+        This document is not mobile-specific, but rather mobile-scoped. This is to say that there is no part
+        of its content that applies solely to mobile terminals, or to any particular device class; all of its
+        recommendations work and apply equally well across the entire Web. It does however focus on addressing
+        issues commonly found in developing Web applications on mobile devices.
+      </p>
+      <p>
+        It does so by taking a platform view of Web application development in the mobile ecosystem. As things
+        currently stand, there is a large body of diverse specifications at varied degrees of maturity that
+        are supported on mobile devices. These specifications are designed to work together, but also to be
+        implementable separately. Because of this, and because of the great variety of vendors involved in
+        the mobile platform, we currently have an ecosystem in which different vendors have elected to support
+        different subsets of the complete group of technologies currently in development. This fragmentation makes
+        it particularly difficult for developers to know which features they may rely on in creating applications,
+        which in turn hurts the development of the entire Web ecosystem.
+      </p>
+      <p>
+        By taking the platform view, this document defines a common baseline that is expected to be universally
+        available to developers (or sufficiently close to that to be useful). It does not replace any existing
+        specification, be it considered stable or in continuous development. Its only goal is to define a baseline
+        target platform that vendors can align on.
+      </p>
+      <p>
+        In no case should this be considered a cap on the features that an application may use — developers are 
+        considered to know what they are doing and to be naturally free to use any functionality not included in
+        this core baseline according to their own judgement. It is not intended to be the final word on the 
+        Web platform either, rather the intent of the group in charge of this document is to produce multiple
+        levels in quick succession that will layer atop one another as parts of the platform that are reliably
+        usable stabilise sufficiently and can be driven to adoption and deployment. For this first level, we
+        have started off the intersection of what is available in the most popular mobile platforms. Future levels
+        will assume more of a driving role.
+      </p>
+      <p>
+        Our focus in writing this series of documents is entirely driven by developer needs. There may at times
+        be some corner case issues that would require deep exegesis of this or that specification were we to address
+        them. But unless a demonstrated interoperability issue can be exposed that concerns a real-world
+        use case for such corner case behaviours, such exegesis will not take place and we will gladly ignore
+        these darker corners. At times some choices may be messy, or even against known best practices. But if they
+        are the most pragmatic option, they will be chosen.
+      </p>
+      <!-- Froyo or Gingerbread + iOS5 -->
+    </section>
+    <section>
+      <h2>Markup</h2>
       <p>
         XXX
       </p>
       <!-- 
-        - mention that it is acceptable for implementations AT THIS LEVEL to have vendor prefixes
+      - HTML (details)
+        - Application Cache
+        - DOCTYPE
+      - I guess no SVG?
+      - Video (with specific codecs? or just require multiple sources on video elements, properly tested)
+      - meta viewport
       -->
     </section>
     <section>
-      <h2>Features</h2>
+      <h2>Style</h2>
       <p>
         XXX
       </p>
-      <section>
-        <h2>HTML5 Parsing</h2>
-        <p>
-          XXX
-        </p>
-      </section>
+      <!-- 
+      - vendor prefixes allowed
+      - CSS 2.1:
+        - selectors
+        - generated content
+        - mixmax
+      - CSS Animation
+      - CSS Color: opacity, RGBA, HSLA
+      - CSS Transforms
+      - CSS Transitions
+      - CSS UI: text-overflow, box-sizing, pointer-events
+      - CSS Values: rem values
+      -->
     </section>
-    <!-- 
-      SECTIONS:
-        - CORS
-        - Application Cache
-        - Canvas2D
-        - CSS 2.1 Selectors (all of CSS 2.1?)
-        - CSS Animation
-        - CSS Color: opacity, RGBA, HSLA
-        - CSS min/max-width/height
-        - CSS Transforms
-        - CSS Transitions
-        - CSS UI: text-overflow, box-sizing, pointer-events
-        - CSS Values: rem values
-        - Geolocation
-        - Native JSON
-        - ECMAScript edition 3 + some stuff from 5 (all that is shimable)
-        - postMessage
-        - Progress Events + XHR
-        - alert/prompt/confirm (callable host object using apply())
-        - Selector API
-        - Video (with specific codecs? or just require multiple sources on video elements, properly tested)
-        - meta viewport
-        - local storage
-    -->
+    <section>
+      <h2>Scripting</h2>
+      <p>
+        XXX
+      </p>
+      <!-- 
+      - Canvas2D
+      - Geolocation
+      - Native JSON
+      - ECMAScript edition 3 + some stuff from 5 (all that is shimable)
+      - Web Messaging
+      - XHR
+        - Progress Events
+      - alert/prompt/confirm (callable host object using apply())
+      - Selector API level 2
+      - local storage
+      - History
+      - others, not sure how to list them (DOM especially — maybe DOM4? issue)
+      -->
+    </section>
+    <section>
+      <h2>Network</h2>
+      <p>
+        XXX
+      </p>
+      <!-- 
+      - HTTP 1.1 (partially?)
+      - CORS
+      - issue: what is supported for HTTPS?
+      -->
+    </section>
   </body>
 </html>
