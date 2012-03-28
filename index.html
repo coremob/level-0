@@ -142,13 +142,21 @@
     <section>
       <h2>Network</h2>
       <p>
-        XXX
+        This section defines which networking protocols are required at this level.
       </p>
-      <!-- 
-      - HTTP 1.1 (partially?)
-      - CORS
-      - issue: what is supported for HTTPS?
-      -->
+      <p>
+        User agents MUST support HTTP 1.1 [[!HTTP11]].
+      </p>
+      <p class='issue'>
+        I would assume that such support may be partial at best for some of the more obscure parts of HTTP.
+        Do we care? Are there known interoperability issues here?
+      </p>
+      <p>
+        User agents MUST support Cross-Origin Resource Sharing [[!CORS]].
+      </p>
+      <p class='issue'>
+        What do we need to specify for HTTPS/SSL/TLS?
+      </p>
     </section>
   </body>
 </html>
