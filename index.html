@@ -98,6 +98,7 @@
         <li>The HTML Syntax [§8]</li>
         <li>Offline Web applications, also known as Application Cache [§5.6]</li>
         <li>The <code>audio</code> [§4.8.7] and <code>video</code> [§4.8.6] elements</li>
+        <li>Session history and navigation [§5.4], notably the <code>History</code> interface</li>
       </ul>
       <p class='issue'>
         Obviously the two above taken on their own don't give you much. Into how much detail do we need to go?
@@ -117,7 +118,7 @@
     <section>
       <h2>Style</h2>
       <p>
-        XXX
+        This section defines which support for styling with CSS is required at this level.
       </p>
       <!-- 
       - vendor prefixes allowed
@@ -136,22 +137,39 @@
     <section>
       <h2>Scripting</h2>
       <p>
-        XXX
+        This section defines which scripting support in language and APIs are required at this level.
       </p>
-      <!-- 
-      - Canvas2D
-      - Geolocation
-      - Native JSON
-      - ECMAScript edition 3 + some stuff from 5 (all that is shimable)
-      - Web Messaging
-      - XHR
-        - Progress Events
-      - alert/prompt/confirm (callable host object using apply())
-      - Selector API level 2
-      - local storage
-      - History
-      - others, not sure how to list them (DOM especially — maybe DOM4? issue)
-      -->
+      <p>
+        User agents MUST support ECMAScript ed3 [[!ECMA262]] in full, plus all the parts from ed5 that
+        can be shimmed, including native JSON. Notably, user agents MUST support callable host objects
+        using <code>apply()</code>.
+      </p>
+      <p class='issue'>
+        The "can be shimmed" criterion seems like a good one, but it ought to be more precisely defined.
+        If you implement JS in JS you can shim pretty much anything.
+      </p>
+      <p>
+        User agents MUST support the Canvas2D API [[!CANVAS2D]].
+      </p>
+      <p>
+        User agents MUST support the Geolocation API [[!GEOLOCATION-API]].
+      </p>
+      <p>
+        User agents MUST support the Web Messaging API [[!POSTMSG]].
+      </p>
+      <p>
+        User agents MUST support the XMLHttpRequest API [[!XHR]], notably support for
+        Progress Events [[!PROGRESS-EVENTS]].
+      </p>
+      <p>
+        User agents MUST support the Selector API level 2 [[!SELECTOR2]].
+      </p>
+      <p>
+        User agents MUST support the Web Storage API [[!WEBSTORAGE]].
+      </p>
+      <p class='issue'>
+        Obviously there are quite a few more. DOM4?
+      </p>
     </section>
     <section>
       <h2>Network</h2>
