@@ -89,16 +89,30 @@
     <section>
       <h2>Markup</h2>
       <p>
-        XXX
+        This section describes requirements for markup languages and related features.
       </p>
-      <!-- 
-      - HTML (details)
-        - Application Cache
-        - DOCTYPE
-      - I guess no SVG?
-      - Video (with specific codecs? or just require multiple sources on video elements, properly tested)
-      - meta viewport
-      -->
+      <p>
+        User agents MUST support the following parts from HTML 5 [[!HTML5]]:
+      </p>
+      <ul>
+        <li>The HTML Syntax [§8]</li>
+        <li>Offline Web applications, also known as Application Cache [§5.6]</li>
+        <li>The <code>audio</code> [§4.8.7] and <code>video</code> [§4.8.6] elements</li>
+      </ul>
+      <p class='issue'>
+        Obviously the two above taken on their own don't give you much. Into how much detail do we need to go?
+      </p>
+      <p class='issue'>
+        We probably don't want to require specific codecs, just ensure that multiple sources are supported.
+        Thoughts?
+      </p>
+      <p>
+        User agents MUST support CSS Device Adaptation [[!CSS-ADAPTATION]] as specified through a <code>meta</code>
+        viewport element.
+      </p>
+      <p class='issue'>
+        Not sure that this is clear enough, and it probably requires more than what is supported.
+      </p>
     </section>
     <section>
       <h2>Style</h2>
