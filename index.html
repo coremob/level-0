@@ -97,7 +97,7 @@
       <ul>
         <li>The HTML Syntax [§8]</li>
         <li>XHTML served as <code>application/xhtml+xml</code></li>
-        <li>Offline Web applications, also known as Application Cache [§5.6]</li>
+        <li>Offline Web applications, also known as Application Cache [§5.6] <span class='issue'>Is this is Level 1?</span></li>
         <li>The <code>audio</code> [§4.8.7] and <code>video</code> [§4.8.6] elements</li>
         <li>Session history and navigation [§5.4], notably the <code>History</code> interface and the <code>hashchange</code> event</li>
         <li>DOM tree accessors [§3.1.4], notably <code>getElementsByClassName</code></li>
@@ -248,12 +248,18 @@
       <p>
         User agents MUST support Touch Events version 1 [[!TOUCH-EVENTS]].
       </p>
+      <p class='issue'>
+        Need to check if Touch isn't for Level 1.
+      </p>
       <p>
         User agents MUST support the Web Messaging API [[!POSTMSG]].
       </p>
       <p>
         User agents MUST support the XMLHttpRequest API level 2 [[!XMLHTTPREQUEST2]], notably support for
         Progress Events [[!PROGRESS-EVENTS]].
+      </p>
+      <p class='issue'>
+        We require Progress Events which are in XHR level 2, but all the rest of XHR2 is for CoreMob level 1.
       </p>
       <p>
         User agents MUST support the Selectors API level 2 [[!SELECTORS-API2]].
